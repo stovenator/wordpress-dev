@@ -42,12 +42,11 @@ RUN sudo -u www-data tar zx -C /srv/www -f /latest.tar.gz
 # Configure apache to run wordpress site
 ADD wordpress.conf  /etc/apache2/sites-available
 RUN sudo a2ensite wordpress && sudo a2enmod rewrite && sudo a2dissite 000-default
-#RUN sudo service apache2 start
 
 
 ARG MYSQL_USER_PASSWORD=blahblah
+
 # Configure mysql server
-#RUN sudo service mysql start
 ADD mysql.sh /
 RUN chmod 755 /mysql.sh 
 RUN service mysql restart && /mysql.sh

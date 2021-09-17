@@ -1,7 +1,7 @@
 # Build instructions
 
 ## Build the docker image
-`docker build --build-arg MYSQL_USER_PASSWORD=mysql_password_to_use -t wordpress-dev .`
+`docker build --build-arg MYSQL_USER_PASSWORD=change_this_password -t wordpress-dev .`
 
 ## Create a docker container from the built image
 `docker run -dit -p 8088:80/tcp --name wp_container wordpress_dev bash`
