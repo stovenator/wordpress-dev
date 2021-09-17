@@ -45,7 +45,6 @@ RUN sudo a2ensite wordpress && sudo a2enmod rewrite && sudo a2dissite 000-defaul
 #RUN sudo service apache2 start
 
 
-#ARG MYSQL_USER_PASSWORD=p@ss4h0rnsN3tDb
 ARG MYSQL_USER_PASSWORD=blahblah
 # Configure mysql server
 #RUN sudo service mysql start
